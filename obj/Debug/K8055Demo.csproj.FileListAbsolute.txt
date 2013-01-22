@@ -16,3 +16,11 @@ C:\Users\peacemaker\C# Projects\FuzzyLogic\obj\Debug\K8055Demo.csprojResolveAsse
 C:\Users\peacemaker\C# Projects\FuzzyLogic\obj\Debug\K8055Demo.Form1.resources
 C:\Users\peacemaker\C# Projects\FuzzyLogic\obj\Debug\K8055Demo.Properties.Resources.resources
 C:\Users\peacemaker\C# Projects\FuzzyLogic\obj\Debug\K8055Demo.csproj.GenerateResource.Cache
+C:\Users\Christian\Documents\GitHub\FuzzyLogic\obj\Debug\K8055Demo.exe
+C:\Users\Christian\Documents\GitHub\FuzzyLogic\obj\Debug\K8055Demo.pdb
+C:\Users\Christian\Documents\GitHub\FuzzyLogic\bin\Debug\K8055Demo.exe
+C:\Users\Christian\Documents\GitHub\FuzzyLogic\bin\Debug\K8055Demo.pdb
+C:\Users\Christian\Documents\GitHub\FuzzyLogic\obj\Debug\K8055Demo.csprojResolveAssemblyReference.cache
+C:\Users\Christian\Documents\GitHub\FuzzyLogic\obj\Debug\K8055Demo.Form1.resources
+C:\Users\Christian\Documents\GitHub\FuzzyLogic\obj\Debug\K8055Demo.Properties.Resources.resources
+C:\Users\Christian\Documents\GitHub\FuzzyLogic\obj\Debug\K8055Demo.csproj.GenerateResource.Cache

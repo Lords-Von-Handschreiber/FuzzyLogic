@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuzzyCore", "FuzzyCore\Fuzz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuzzyLogicImpl", "FuzzyLogicImpl\FuzzyLogicImpl.csproj", "{0A717405-3E6F-49B4-ACE3-957098902AB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K8055Controller", "K8055Controller\K8055Controller.csproj", "{769693CD-1653-402D-8392-A35B9CBE8C90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +31,21 @@ Global
 		{0298E837-E8CD-4C8E-B394-DA6C491E5DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0298E837-E8CD-4C8E-B394-DA6C491E5DE4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0298E837-E8CD-4C8E-B394-DA6C491E5DE4}.Release|x86.ActiveCfg = Release|Any CPU
+<<<<<<< HEAD
 		{0A717405-3E6F-49B4-ACE3-957098902AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0A717405-3E6F-49B4-ACE3-957098902AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A717405-3E6F-49B4-ACE3-957098902AB8}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{0A717405-3E6F-49B4-ACE3-957098902AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A717405-3E6F-49B4-ACE3-957098902AB8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0A717405-3E6F-49B4-ACE3-957098902AB8}.Release|x86.ActiveCfg = Release|Any CPU
+=======
+		{769693CD-1653-402D-8392-A35B9CBE8C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769693CD-1653-402D-8392-A35B9CBE8C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769693CD-1653-402D-8392-A35B9CBE8C90}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{769693CD-1653-402D-8392-A35B9CBE8C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769693CD-1653-402D-8392-A35B9CBE8C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769693CD-1653-402D-8392-A35B9CBE8C90}.Release|x86.ActiveCfg = Release|Any CPU
+>>>>>>> ebe5b1e49e8ccbaf4a9cbdbfdbd0eb7a8f78b6ed
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
