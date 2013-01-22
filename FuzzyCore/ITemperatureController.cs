@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FuzzyCore
 {
-    interface ITemperatureController
+    public interface ITemperatureController
     {
         /// <summary>
         /// Is the temperature controller avaiable        
