@@ -2,4 +2,8 @@ C:\Users\Christian\Documents\GitHub\FuzzyLogic\FuzzyCore\bin\Debug\FuzzyCore.dll
 C:\Users\Christian\Documents\GitHub\FuzzyLogic\FuzzyCore\bin\Debug\FuzzyCore.pdb
 C:\Users\Christian\Documents\GitHub\FuzzyLogic\FuzzyCore\obj\Debug\FuzzyCore.dll
 C:\Users\Christian\Documents\GitHub\FuzzyLogic\FuzzyCore\obj\Debug\FuzzyCore.pdb
-C:\Users\Christian\Documents\GitHub\FuzzyLogic\FuzzyCore\obj\Debug\FuzzyCore.csprojResolveAssemblyReference.cache
+C:\Users\peacemaker\C# Projects\FuzzyLogic\FuzzyCore\bin\Debug\FuzzyCore.dll
+C:\Users\peacemaker\C# Projects\FuzzyLogic\FuzzyCore\bin\Debug\FuzzyCore.pdb
+C:\Users\peacemaker\C# Projects\FuzzyLogic\FuzzyCore\obj\Debug\FuzzyCore.csprojResolveAssemblyReference.cache
+C:\Users\peacemaker\C# Projects\FuzzyLogic\FuzzyCore\obj\Debug\FuzzyCore.dll
+C:\Users\peacemaker\C# Projects\FuzzyLogic\FuzzyCore\obj\Debug\FuzzyCore.pdb

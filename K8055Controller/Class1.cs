@@ -8,6 +8,11 @@ namespace K8055Controller
 {
     public class Class1
     {
+        static void Main(string[] args)
+        {
+            FrmDemo fr = new FrmDemo();
+            fr.Show();
+        }
         
     }
 }
