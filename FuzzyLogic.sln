@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K8055Demo", "K8055Demo.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuzzyCore", "FuzzyCore\FuzzyCore.csproj", "{0298E837-E8CD-4C8E-B394-DA6C491E5DE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K8055Controller", "..\K8055Controller\K8055Controller.csproj", "{769693CD-1653-402D-8392-A35B9CBE8C90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K8055Controller", "K8055Controller\K8055Controller.csproj", "{769693CD-1653-402D-8392-A35B9CBE8C90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
