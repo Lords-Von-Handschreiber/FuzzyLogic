@@ -21,3 +21,5 @@ C:\Users\Christian\Downloads\k8055_sdk_version4\Examples\K8055DemoVC#_2008\K8055
 C:\Users\Christian\Downloads\k8055_sdk_version4\Examples\K8055DemoVC#_2008\K8055Demo\obj\x86\Debug\K8055Demo.Form1.resources
 C:\Users\Christian\Downloads\k8055_sdk_version4\Examples\K8055DemoVC#_2008\K8055Demo\obj\x86\Debug\K8055Demo.Properties.Resources.resources
 C:\Users\Christian\Downloads\k8055_sdk_version4\Examples\K8055DemoVC#_2008\K8055Demo\obj\x86\Debug\K8055Demo.csproj.GenerateResource.Cache
+C:\Users\peacemaker\C# Projects\FuzzyLogic\obj\x86\Debug\K8055Demo.exe
+C:\Users\peacemaker\C# Projects\FuzzyLogic\obj\x86\Debug\K8055Demo.pdb

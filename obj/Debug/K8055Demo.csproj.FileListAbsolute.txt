@@ -8,3 +8,5 @@ C:\Users\Asentaja\Documents\Programming\C#2008\K8055DemoVC#_2008\K8055Demo\obj\D
 C:\Users\Asentaja\Documents\Programming\C#2008\K8055DemoVC#_2008\K8055Demo\obj\Debug\K8055Demo.pdb
 D:\Users\Asentaja\Documents\Programming\C#2008\K8055DemoVC#_2008\K8055Demo\obj\Debug\K8055Demo.exe
 D:\Users\Asentaja\Documents\Programming\C#2008\K8055DemoVC#_2008\K8055Demo\obj\Debug\K8055Demo.pdb
+C:\Users\peacemaker\C# Projects\FuzzyLogic\obj\Debug\K8055Demo.exe
+C:\Users\peacemaker\C# Projects\FuzzyLogic\obj\Debug\K8055Demo.pdb
