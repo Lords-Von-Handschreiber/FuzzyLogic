@@ -12,7 +12,7 @@ namespace FuzzyCore
         /// Is the temperature controller avaiable        
         /// </summary>
         /// <returns>Returns true if all components are connected correctly</returns>
-        bool isAvaiable();
+        bool IsAvaiable();
 
         /// <summary>
         /// Provide outside temperature in degree celsius

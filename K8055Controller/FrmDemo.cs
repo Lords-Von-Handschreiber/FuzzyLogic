@@ -25,7 +25,7 @@ namespace K8055Controller
 
         private void butisAvaiable_Click(object sender, EventArgs e)
         {
-            tc.isAvaiable();
+            tc.IsAvaiable();
         }
 
         private void FrmDemo_Load(object sender, EventArgs e)

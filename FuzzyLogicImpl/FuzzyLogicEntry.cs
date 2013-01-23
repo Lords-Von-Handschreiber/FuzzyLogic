@@ -48,7 +48,7 @@ namespace FuzzyLogicImpl
 
         public void PerformFuzzyCalculation()
         {
-            if (controller.isAvaiable())
+            if (controller.IsAvaiable())
             {
                 LinguisticVariable tempinside = engine.LinguisticVariableCollection[0];
                 tempinside.InputValue = controller.GetInsideTemperature();

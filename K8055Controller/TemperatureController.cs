@@ -83,7 +83,7 @@ namespace K8055Controller
         public static extern int SetCurrentDevice(int lngCardAddress);
 
 
-        public bool isAvaiable()
+        public bool IsAvaiable()
         {
             int cardAddr = 3; //SK5 + SK6 aktiviert
             int h = OpenDevice(cardAddr);
