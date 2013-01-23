@@ -126,5 +126,10 @@ namespace K8055Controller
         {
             throw new NotImplementedException();
         }
+        
+        public void SetNoHeaterOn(double intensity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
