@@ -47,5 +47,11 @@ namespace FuzzyCore
         /// Set both heater on
         /// </summary>
         void SetBothHeatersOn(double intensity);
+
+        /// <summary>
+        /// Disable both heaters
+        /// </summary>
+        /// <param name="intensity"></param>
+        void SetNoHeaterOn(double intensity);
     }
 }

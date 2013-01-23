@@ -55,14 +55,32 @@ namespace FuzzyLogicImpl
                 LinguisticVariable tempoutside = engine.LinguisticVariableCollection[1];
                 tempoutside.InputValue = controller.GetOutsideTemperature();
                 LinguisticVariable heating = engine.LinguisticVariableCollection[2];
+                
                 try
                 {
-                    engine.Defuzzify();
+                    double result =  engine.Defuzzify();
+                    SetController(result);
                 }
                 catch (Exception ex)
                 {
-
+                    
                 }
+            }
+        }
+
+        public void SetController(double result)
+        {
+            if (result >= 0.66)
+            {
+                controller.SetBothHeatersOn(result);
+            }
+            else if (result >= 0.25)
+            {
+                controller.SetOneHeaterOn(result);
+            }
+            else
+            {
+                controller.SetNoHeaterOn(result);
             }
         }
     }
