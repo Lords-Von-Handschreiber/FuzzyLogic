@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FuzzyLogicImpl;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,14 +14,19 @@ namespace K8055Controller
     public partial class FrmDemo : Form
     {
         
-        private TemperatureController tc;
+        private TemperatureController tc = new TemperatureController();
 
-        
+        private FuzzyLogicEntry fle = new FuzzyLogicEntry(new TemperatureController());
 
         public FrmDemo()
         {
             InitializeComponent();
-            tc = new TemperatureController();
+            timer1.Tick += timer1_Tick;
+        }
+
+        void timer1_Tick(object sender, EventArgs e)
+        {
+            fle.PerformFuzzyCalculation();
         }
 
         private void butisAvaiable_Click(object sender, EventArgs e)

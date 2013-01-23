@@ -8,15 +8,11 @@ namespace K8055Controller
 {
     class SimpleLogger
     {
-        public SimpleLogger(){
-            
-        }
-
-        public void log(String logtxt)
+        public void log(string logtxt)
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\temp\temperaturController.txt", true))
             {
-                file.WriteLine("logtxt");
+                file.WriteLine(logtxt);
             }
         }
     }

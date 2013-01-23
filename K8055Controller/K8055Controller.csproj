@@ -60,6 +60,10 @@
       <Project>{0298e837-e8cd-4c8e-b394-da6c491e5de4}</Project>
       <Name>FuzzyCore</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FuzzyLogicImpl\FuzzyLogicImpl.csproj">
+      <Project>{0a717405-3e6f-49b4-ace3-957098902ab8}</Project>
+      <Name>FuzzyLogicImpl</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FrmDemo.resx">

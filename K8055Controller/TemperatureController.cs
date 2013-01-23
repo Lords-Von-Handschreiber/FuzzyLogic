@@ -85,16 +85,23 @@ namespace K8055Controller
 
         public bool IsAvaiable()
         {
-            int cardAddr = 3; //SK5 + SK6 aktiviert
-            int h = OpenDevice(cardAddr);
-            if(h==3){
-                sl.log("Boerdli connected");
-                return true;
-            }else{
-                sl.log("Boerdli not connected");
-                return false;
+            try
+            {
+                int cardAddr = 3; //SK5 + SK6 aktiviert
+                int h = OpenDevice(cardAddr);
+                if (h == 3)
+                {
+                    sl.log("Boerdli connected");
+                    return true;
+                }
             }
-            
+            catch (Exception e)
+            {
+                // ignore it, just return false
+                sl.log(e.ToString());
+            }
+            sl.log("Boerdli not connected");
+            return false;
         }
 
         public double GetOutsideTemperature()
