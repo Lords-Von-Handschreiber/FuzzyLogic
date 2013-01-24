@@ -21,7 +21,7 @@ namespace K8055Controller
         public FrmDemo()
         {
             InitializeComponent();
-            timer1.Tick += timer1_Tick;
+            // timer1.Tick += timer1_Tick; //tBX
         }
 
         void timer1_Tick(object sender, EventArgs e)
