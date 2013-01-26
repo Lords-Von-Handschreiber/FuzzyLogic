@@ -13,6 +13,8 @@ namespace K8055Controller
     {
         private SimpleLogger sl = new SimpleLogger();
 
+        private bool boerdliConnected = false;
+
         [DllImport("k8055d.dll")]
         public static extern int OpenDevice(int CardAddress);
 
@@ -85,22 +87,27 @@ namespace K8055Controller
 
         public bool IsAvaiable()
         {
+            boerdliConnected = false;
             try
             {
-                int cardAddr = 3; //SK5 + SK6 aktiviert
+                int cardAddr = 0; //SK5 + SK6 aktiviert
                 int h = OpenDevice(cardAddr);
-                if (h == 3)
+                if (h == 0)
                 {
                     sl.log("Boerdli connected");
+                    boerdliConnected = true;
                     return true;
+                }else{
+                   sl.log("Boerdli not connected");
                 }
+              
             }
             catch (Exception e)
             {
                 // ignore it, just return false
                 sl.log(e.ToString());
             }
-            sl.log("Boerdli not connected");
+            
             return false;
         }
 

@@ -12,7 +12,8 @@ namespace K8055Controller
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\temp\temperaturController.txt", true))
             {
-                file.WriteLine(logtxt);
+
+                file.WriteLine(DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString() + logtxt);
             }
         }
     }
