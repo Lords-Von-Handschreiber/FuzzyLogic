@@ -38,5 +38,35 @@ namespace K8055Controller
         {
 
         }
+
+        private void butGetOutsideTemperature_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(tc.GetOutsideTemperature().ToString());
+        }
+
+        private void butGetInsideTemperature_Click(object sender, EventArgs e)
+        {
+             MessageBox.Show(tc.GetInsideTemperature().ToString());
+        }
+
+        private void butGetIsOneHeaterOn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(tc.GetIsOneHeaterOn().ToString());
+        }
+
+        private void butGetAreBothHeatersOn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(tc.GetAreBothHeatersOn().ToString());
+        }
+
+        private void butSetOneHeaterOn_Click(object sender, EventArgs e)
+        {
+            tc.SetOneHeaterOn(1);
+        }
+
+        private void butSetBothHeatersOn_Click(object sender, EventArgs e)
+        {
+            tc.SetBothHeatersOn(1);
+        }
     }
 }

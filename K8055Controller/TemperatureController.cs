@@ -5,15 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using FuzzyCore;
 using System.Runtime.InteropServices;
+using System.Xml;
 
 
 namespace K8055Controller
 {
     class TemperatureController : ITemperatureController
     {
+        int Data1, Data2;
         private SimpleLogger sl = new SimpleLogger();
 
         private bool boerdliConnected = false;
+        private bool heaterOneOn = false;
+        private bool heaterTwoOn = false;
 
         [DllImport("k8055d.dll")]
         public static extern int OpenDevice(int CardAddress);
@@ -85,6 +89,19 @@ namespace K8055Controller
         public static extern int SetCurrentDevice(int lngCardAddress);
 
 
+       
+        private bool connector()
+        {
+            if (boerdliConnected)
+            {
+                return true;
+            }
+            else
+            {
+                return IsAvaiable();
+            }
+        }
+
         public bool IsAvaiable()
         {
             boerdliConnected = false;
@@ -104,7 +121,6 @@ namespace K8055Controller
             }
             catch (Exception e)
             {
-                // ignore it, just return false
                 sl.log(e.ToString());
             }
             
@@ -113,22 +129,52 @@ namespace K8055Controller
 
         public double GetOutsideTemperature()
         {
-            throw new NotImplementedException();
+            //WetterID von Zürich
+            String woeid = "784794";
+            XmlDocument doc = new XmlDocument();
+            try
+            {
+                //Wetterdaten von Yahoo-Abfragen für Zürich
+                doc.Load("http://weather.yahooapis.com/forecastrss?w="+woeid+"&u=c");
+                XmlNodeList nodes = doc.GetElementsByTagName("yweather:condition");
+                return double.Parse(nodes[0].Attributes["temp"].Value.ToString());
+            }
+            catch (Exception e)
+            {
+                sl.log(e.ToString());
+            }
+           
+            return -999;
         }
 
         public double GetInsideTemperature()
         {
-            throw new NotImplementedException();
+            if (connector())
+            {
+                //Beide Analoge Eingänge messen
+                ReadAllAnalog(ref Data1,ref Data2);
+                //Gemessene Voltzahl in Temperatur umwandeln
+                double temp = ((101 * (Data2 / 1024)) - 23);
+                return temp;
+            }
+            return -999;
         }
 
         public bool GetIsOneHeaterOn()
         {
-            throw new NotImplementedException();
+            return heaterOneOn;
         }
 
         public bool GetAreBothHeatersOn()
         {
-            throw new NotImplementedException();
+            if (heaterOneOn && heaterTwoOn)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void SetOneHeaterOn(double intensity)

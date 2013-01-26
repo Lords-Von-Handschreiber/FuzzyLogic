@@ -41,10 +41,9 @@
             // 
             // butisAvaiable
             // 
-            this.butisAvaiable.Location = new System.Drawing.Point(16, 15);
-            this.butisAvaiable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butisAvaiable.Location = new System.Drawing.Point(12, 12);
             this.butisAvaiable.Name = "butisAvaiable";
-            this.butisAvaiable.Size = new System.Drawing.Size(191, 28);
+            this.butisAvaiable.Size = new System.Drawing.Size(143, 23);
             this.butisAvaiable.TabIndex = 0;
             this.butisAvaiable.Text = "isAvaiable";
             this.butisAvaiable.UseVisualStyleBackColor = true;
@@ -52,63 +51,63 @@
             // 
             // butGetOutsideTemperature
             // 
-            this.butGetOutsideTemperature.Location = new System.Drawing.Point(16, 50);
-            this.butGetOutsideTemperature.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butGetOutsideTemperature.Location = new System.Drawing.Point(12, 41);
             this.butGetOutsideTemperature.Name = "butGetOutsideTemperature";
-            this.butGetOutsideTemperature.Size = new System.Drawing.Size(191, 28);
+            this.butGetOutsideTemperature.Size = new System.Drawing.Size(143, 23);
             this.butGetOutsideTemperature.TabIndex = 1;
             this.butGetOutsideTemperature.Text = "GetOutsideTemperature";
             this.butGetOutsideTemperature.UseVisualStyleBackColor = true;
+            this.butGetOutsideTemperature.Click += new System.EventHandler(this.butGetOutsideTemperature_Click);
             // 
             // butGetInsideTemperature
             // 
-            this.butGetInsideTemperature.Location = new System.Drawing.Point(16, 86);
-            this.butGetInsideTemperature.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butGetInsideTemperature.Location = new System.Drawing.Point(12, 70);
             this.butGetInsideTemperature.Name = "butGetInsideTemperature";
-            this.butGetInsideTemperature.Size = new System.Drawing.Size(191, 28);
+            this.butGetInsideTemperature.Size = new System.Drawing.Size(143, 23);
             this.butGetInsideTemperature.TabIndex = 2;
             this.butGetInsideTemperature.Text = "GetInsideTemperature";
             this.butGetInsideTemperature.UseVisualStyleBackColor = true;
+            this.butGetInsideTemperature.Click += new System.EventHandler(this.butGetInsideTemperature_Click);
             // 
             // butGetIsOneHeaterOn
             // 
-            this.butGetIsOneHeaterOn.Location = new System.Drawing.Point(16, 122);
-            this.butGetIsOneHeaterOn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butGetIsOneHeaterOn.Location = new System.Drawing.Point(12, 99);
             this.butGetIsOneHeaterOn.Name = "butGetIsOneHeaterOn";
-            this.butGetIsOneHeaterOn.Size = new System.Drawing.Size(191, 28);
+            this.butGetIsOneHeaterOn.Size = new System.Drawing.Size(143, 23);
             this.butGetIsOneHeaterOn.TabIndex = 3;
             this.butGetIsOneHeaterOn.Text = "GetIsOneHeaterOn";
             this.butGetIsOneHeaterOn.UseVisualStyleBackColor = true;
+            this.butGetIsOneHeaterOn.Click += new System.EventHandler(this.butGetIsOneHeaterOn_Click);
             // 
             // butSetBothHeatersOn
             // 
-            this.butSetBothHeatersOn.Location = new System.Drawing.Point(16, 229);
-            this.butSetBothHeatersOn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butSetBothHeatersOn.Location = new System.Drawing.Point(12, 186);
             this.butSetBothHeatersOn.Name = "butSetBothHeatersOn";
-            this.butSetBothHeatersOn.Size = new System.Drawing.Size(191, 28);
+            this.butSetBothHeatersOn.Size = new System.Drawing.Size(143, 23);
             this.butSetBothHeatersOn.TabIndex = 6;
             this.butSetBothHeatersOn.Text = "SetBothHeatersOn";
             this.butSetBothHeatersOn.UseVisualStyleBackColor = true;
+            this.butSetBothHeatersOn.Click += new System.EventHandler(this.butSetBothHeatersOn_Click);
             // 
             // butSetOneHeaterOn
             // 
-            this.butSetOneHeaterOn.Location = new System.Drawing.Point(16, 193);
-            this.butSetOneHeaterOn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butSetOneHeaterOn.Location = new System.Drawing.Point(12, 157);
             this.butSetOneHeaterOn.Name = "butSetOneHeaterOn";
-            this.butSetOneHeaterOn.Size = new System.Drawing.Size(191, 28);
+            this.butSetOneHeaterOn.Size = new System.Drawing.Size(143, 23);
             this.butSetOneHeaterOn.TabIndex = 5;
             this.butSetOneHeaterOn.Text = "SetOneHeaterOn";
             this.butSetOneHeaterOn.UseVisualStyleBackColor = true;
+            this.butSetOneHeaterOn.Click += new System.EventHandler(this.butSetOneHeaterOn_Click);
             // 
             // butGetAreBothHeatersOn
             // 
-            this.butGetAreBothHeatersOn.Location = new System.Drawing.Point(16, 158);
-            this.butGetAreBothHeatersOn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butGetAreBothHeatersOn.Location = new System.Drawing.Point(12, 128);
             this.butGetAreBothHeatersOn.Name = "butGetAreBothHeatersOn";
-            this.butGetAreBothHeatersOn.Size = new System.Drawing.Size(191, 28);
+            this.butGetAreBothHeatersOn.Size = new System.Drawing.Size(143, 23);
             this.butGetAreBothHeatersOn.TabIndex = 4;
             this.butGetAreBothHeatersOn.Text = "GetAreBothHeatersOn";
             this.butGetAreBothHeatersOn.UseVisualStyleBackColor = true;
+            this.butGetAreBothHeatersOn.Click += new System.EventHandler(this.butGetAreBothHeatersOn_Click);
             // 
             // timer1
             // 
@@ -117,9 +116,9 @@
             // 
             // FrmDemo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 316);
+            this.ClientSize = new System.Drawing.Size(512, 257);
             this.Controls.Add(this.butSetBothHeatersOn);
             this.Controls.Add(this.butSetOneHeaterOn);
             this.Controls.Add(this.butGetAreBothHeatersOn);
@@ -127,7 +126,6 @@
             this.Controls.Add(this.butGetInsideTemperature);
             this.Controls.Add(this.butGetOutsideTemperature);
             this.Controls.Add(this.butisAvaiable);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmDemo";
             this.Text = "FrmDemo";
             this.Load += new System.EventHandler(this.FrmDemo_Load);
