@@ -68,5 +68,10 @@ namespace K8055Controller
         {
             tc.SetBothHeatersOn(1);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tc.SetNoHeaterOn(1);
+        }
     }
 }

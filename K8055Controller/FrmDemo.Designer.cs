@@ -37,6 +37,7 @@
             this.butSetOneHeaterOn = new System.Windows.Forms.Button();
             this.butGetAreBothHeatersOn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // butisAvaiable
@@ -114,11 +115,22 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 215);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "SetNoHeaterOn";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 257);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.butSetBothHeatersOn);
             this.Controls.Add(this.butSetOneHeaterOn);
             this.Controls.Add(this.butGetAreBothHeatersOn);
@@ -143,5 +155,6 @@
         private System.Windows.Forms.Button butSetOneHeaterOn;
         private System.Windows.Forms.Button butGetAreBothHeatersOn;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }

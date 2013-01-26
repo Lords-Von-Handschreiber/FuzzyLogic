@@ -179,17 +179,29 @@ namespace K8055Controller
 
         public void SetOneHeaterOn(double intensity)
         {
-            throw new NotImplementedException();
+            if (connector())
+            {
+                OutputAnalogChannel(1, 255);
+                OutputAnalogChannel(2, 0);
+            }
         }
 
         public void SetBothHeatersOn(double intensity)
         {
-            throw new NotImplementedException();
+            if (connector())
+            {
+                OutputAnalogChannel(1, 255);
+                OutputAnalogChannel(2, 255);
+            }
         }
         
         public void SetNoHeaterOn(double intensity)
         {
-            throw new NotImplementedException();
+            if (connector())
+            {
+                OutputAnalogChannel(1, 0);
+                OutputAnalogChannel(2, 0);
+            }
         }
     }
 }
