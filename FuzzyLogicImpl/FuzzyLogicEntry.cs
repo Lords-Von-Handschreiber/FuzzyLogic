@@ -12,6 +12,11 @@ namespace FuzzyLogicImpl
     {
         private FuzzyEngine engine = new FuzzyEngine();
         private ITemperatureController controller;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FuzzyLogicEntry" /> class.
+        /// </summary>
+        /// <param name="controller">The controller.</param>
         public FuzzyLogicEntry(ITemperatureController controller)
         {
             this.controller = controller;
@@ -46,6 +51,9 @@ namespace FuzzyLogicImpl
             engine.FuzzyRuleCollection.Add(new FuzzyRule("IF (TemperatureInside IS Warm) AND (TemperatureOutside IS Warm) THEN PerformHeat IS none"));                       
         }
 
+        /// <summary>
+        /// Performs the fuzzy calculation.
+        /// </summary>
         public void PerformFuzzyCalculation()
         {
             if (controller.IsAvaiable())
@@ -68,6 +76,10 @@ namespace FuzzyLogicImpl
             }
         }
 
+        /// <summary>
+        /// Sets the controller.
+        /// </summary>
+        /// <param name="result">The result.</param>
         public void SetController(double result)
         {
             if (result >= 0.66)

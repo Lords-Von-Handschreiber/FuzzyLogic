@@ -9,49 +9,61 @@ namespace FuzzyCore
     public interface ITemperatureController
     {
         /// <summary>
-        /// Is the temperature controller avaiable        
+        /// Is the temperature controller avaiable
         /// </summary>
-        /// <returns>Returns true if all components are connected correctly</returns>
+        /// <returns>
+        /// Returns true if all components are connected correctly
+        /// </returns>
         bool IsAvaiable();
 
         /// <summary>
         /// Provide outside temperature in degree celsius
         /// </summary>
-        /// <returns>outside temperature</returns>
+        /// <returns>
+        /// outside temperature
+        /// </returns>
         double GetOutsideTemperature();
 
         /// <summary>
         /// Provide inside temperature in degree celsius
         /// </summary>
-        /// <returns>inside temperature</returns>
+        /// <returns>
+        /// inside temperature
+        /// </returns>
         double GetInsideTemperature();
 
         /// <summary>
         /// Get if one heater is on
         /// </summary>
-        /// <returns>true if exactly one heater is on</returns>
+        /// <returns>
+        /// true if exactly one heater is on
+        /// </returns>
         bool GetIsOneHeaterOn();
 
         /// <summary>
         /// Get if both heaters are on
         /// </summary>
-        /// <returns>true if exactly two heaters are on</returns>
+        /// <returns>
+        /// true if exactly two heaters are on
+        /// </returns>
         bool GetAreBothHeatersOn();
 
         /// <summary>
         /// Set exactly one heater on
         /// </summary>
+        /// <param name="intensity">The intensity.</param>
         void SetOneHeaterOn(double intensity);
 
         /// <summary>
         /// Set both heater on
         /// </summary>
+        /// <param name="intensity">The intensity.</param>
         void SetBothHeatersOn(double intensity);
 
         /// <summary>
         /// Disable both heaters
         /// </summary>
-        /// <param name="intensity"></param>
+        /// <param name="intensity">The intensity.</param>
         void SetNoHeaterOn(double intensity);
     }
 }

@@ -15,6 +15,9 @@ namespace K8055Demo
         int Data1, Data2;
         int n = 0;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form1" /> class.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -89,6 +92,11 @@ namespace K8055Demo
         [DllImport("k8055d.dll")]
         public static extern int SetCurrentDevice(int lngCardAddress);
 
+        /// <summary>
+        /// Handles the Click event of the Button1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Button1_Click(object sender, EventArgs e)
         {
             int CardAddr = 3 - (Convert.ToInt32(CheckBox1.Checked) + Convert.ToInt32(CheckBox2.Checked) * 2);
@@ -108,11 +116,21 @@ namespace K8055Demo
             }
         }
 
+        /// <summary>
+        /// Handles the FormClosed event of the Form1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="FormClosedEventArgs" /> instance containing the event data.</param>
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             CloseDevice();
         }
 
+        /// <summary>
+        /// Handles the Tick event of the Timer1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Timer1_Tick(object sender, EventArgs e)
         {
             Timer1.Enabled = false;
@@ -132,6 +150,11 @@ namespace K8055Demo
             Timer1.Enabled = true;
         }
 
+        /// <summary>
+        /// Handles the Tick event of the Timer2 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Timer2_Tick(object sender, EventArgs e)
         {
             ClearDigitalChannel(n);
@@ -141,6 +164,11 @@ namespace K8055Demo
             SetDigitalChannel(n);
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button4 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Button4_Click(object sender, EventArgs e)
         {
             SetAllDigital();
@@ -154,6 +182,11 @@ namespace K8055Demo
             CheckBox16.Checked = true;
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button5 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Button5_Click(object sender, EventArgs e)
         {
             ClearAllDigital();
@@ -167,6 +200,11 @@ namespace K8055Demo
             CheckBox16.Checked = false;
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button7 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Button7_Click(object sender, EventArgs e)
         {
             SetAllAnalog();
@@ -174,6 +212,11 @@ namespace K8055Demo
             VScrollBar2.Value = 0;
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button6 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Button6_Click(object sender, EventArgs e)
         {
             ClearAllAnalog();
@@ -181,6 +224,11 @@ namespace K8055Demo
             VScrollBar2.Value = 255;
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the CheckBox3 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CheckBox3_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox3.Checked)
@@ -202,116 +250,221 @@ namespace K8055Demo
             }
         }
 
+        /// <summary>
+        /// Handles the Scroll event of the VScrollBar1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="ScrollEventArgs" /> instance containing the event data.</param>
         private void VScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             OutputAnalogChannel(1, 255 - VScrollBar1.Value);
             Label4.Text = (255 - VScrollBar1.Value).ToString();
         }
 
+        /// <summary>
+        /// Handles the Scroll event of the VScrollBar2 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="ScrollEventArgs" /> instance containing the event data.</param>
         private void VScrollBar2_Scroll(object sender, ScrollEventArgs e)
         {
             OutputAnalogChannel(2, 255 - VScrollBar2.Value);
             Label5.Text = (255 - VScrollBar2.Value).ToString();
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button2 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Button2_Click(object sender, EventArgs e)
         {
             ResetCounter(1);
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button3 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Button3_Click(object sender, EventArgs e)
         {
             ResetCounter(2);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
             SetCounterDebounceTime(1, 0);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton2 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             SetCounterDebounceTime(1, 2);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton3 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton3_CheckedChanged(object sender, EventArgs e)
         {
             SetCounterDebounceTime(1, 10);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton4 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton4_CheckedChanged(object sender, EventArgs e)
         {
             SetCounterDebounceTime(1, 1000);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton5 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton5_CheckedChanged(object sender, EventArgs e)
         {
             SetCounterDebounceTime(2, 0);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton6 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton6_CheckedChanged(object sender, EventArgs e)
         {
             SetCounterDebounceTime(2, 2);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton7 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton7_CheckedChanged(object sender, EventArgs e)
         {
             SetCounterDebounceTime(2, 10);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton8 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton8_CheckedChanged(object sender, EventArgs e)
         {
             SetCounterDebounceTime(2, 1000);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the CheckBox9 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CheckBox9_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox9.Checked) SetDigitalChannel(1); 
                 else ClearDigitalChannel(1);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the CheckBox10 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CheckBox10_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox10.Checked) SetDigitalChannel(2); 
                 else ClearDigitalChannel(2);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the CheckBox11 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CheckBox11_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox11.Checked) SetDigitalChannel(3); 
                 else ClearDigitalChannel(3);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the CheckBox12 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CheckBox12_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox12.Checked) SetDigitalChannel(4); 
                 else ClearDigitalChannel(4);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the CheckBox13 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CheckBox13_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox13.Checked) SetDigitalChannel(5); 
                 else ClearDigitalChannel(5);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the CheckBox14 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CheckBox14_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox14.Checked) SetDigitalChannel(6); 
                 else ClearDigitalChannel(6);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the CheckBox15 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CheckBox15_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox15.Checked) SetDigitalChannel(7); 
                 else ClearDigitalChannel(7);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the CheckBox16 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void CheckBox16_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox16.Checked) SetDigitalChannel(8); 
                 else ClearDigitalChannel(8);
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button8 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Button8_Click(object sender, EventArgs e)
         {
             int k;
@@ -367,26 +520,51 @@ namespace K8055Demo
             }
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton9 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton9_CheckedChanged(object sender, EventArgs e)
         {
             SetCurrentDevice(0);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton10 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton10_CheckedChanged(object sender, EventArgs e)
         {
             SetCurrentDevice(1);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton11 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton11_CheckedChanged(object sender, EventArgs e)
         {
             SetCurrentDevice(2);
         }
 
+        /// <summary>
+        /// Handles the CheckedChanged event of the RadioButton12 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void RadioButton12_CheckedChanged(object sender, EventArgs e)
         {
             SetCurrentDevice(3);
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button9 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void Button9_Click(object sender, EventArgs e)
         {
             int ver = Version();

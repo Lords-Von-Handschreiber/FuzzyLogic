@@ -89,7 +89,11 @@ namespace K8055Controller
         public static extern int SetCurrentDevice(int lngCardAddress);
 
 
-       
+
+        /// <summary>
+        /// Connectors this instance.
+        /// </summary>
+        /// <returns></returns>
         private bool connector()
         {
             if (boerdliConnected)
@@ -102,6 +106,12 @@ namespace K8055Controller
             }
         }
 
+        /// <summary>
+        /// Is the temperature controller avaiable
+        /// </summary>
+        /// <returns>
+        /// Returns true if all components are connected correctly
+        /// </returns>
         public bool IsAvaiable()
         {
             boerdliConnected = false;
@@ -127,6 +137,12 @@ namespace K8055Controller
             return false;
         }
 
+        /// <summary>
+        /// Provide outside temperature in degree celsius
+        /// </summary>
+        /// <returns>
+        /// outside temperature
+        /// </returns>
         public double GetOutsideTemperature()
         {
             //WetterID von Zürich
@@ -147,6 +163,12 @@ namespace K8055Controller
             return -999;
         }
 
+        /// <summary>
+        /// Provide inside temperature in degree celsius
+        /// </summary>
+        /// <returns>
+        /// inside temperature
+        /// </returns>
         public double GetInsideTemperature()
         {
             if (connector())
@@ -160,11 +182,23 @@ namespace K8055Controller
             return -999;
         }
 
+        /// <summary>
+        /// Get if one heater is on
+        /// </summary>
+        /// <returns>
+        /// true if exactly one heater is on
+        /// </returns>
         public bool GetIsOneHeaterOn()
         {
             return heaterOneOn;
         }
 
+        /// <summary>
+        /// Get if both heaters are on
+        /// </summary>
+        /// <returns>
+        /// true if exactly two heaters are on
+        /// </returns>
         public bool GetAreBothHeatersOn()
         {
             if (heaterOneOn && heaterTwoOn)
@@ -177,6 +211,10 @@ namespace K8055Controller
             }
         }
 
+        /// <summary>
+        /// Set exactly one heater on
+        /// </summary>
+        /// <param name="intensity"></param>
         public void SetOneHeaterOn(double intensity)
         {
             if (connector())
@@ -186,6 +224,10 @@ namespace K8055Controller
             }
         }
 
+        /// <summary>
+        /// Set both heater on
+        /// </summary>
+        /// <param name="intensity"></param>
         public void SetBothHeatersOn(double intensity)
         {
             if (connector())
@@ -194,7 +236,11 @@ namespace K8055Controller
                 OutputAnalogChannel(2, 255);
             }
         }
-        
+
+        /// <summary>
+        /// Disable both heaters
+        /// </summary>
+        /// <param name="intensity"></param>
         public void SetNoHeaterOn(double intensity)
         {
             if (connector())

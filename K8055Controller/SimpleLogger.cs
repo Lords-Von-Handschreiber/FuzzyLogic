@@ -8,6 +8,10 @@ namespace K8055Controller
 {
     class SimpleLogger
     {
+        /// <summary>
+        /// Logs the specified logtxt.
+        /// </summary>
+        /// <param name="logtxt">The logtxt.</param>
         public void log(string logtxt)
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\temp\temperaturController.txt", true))

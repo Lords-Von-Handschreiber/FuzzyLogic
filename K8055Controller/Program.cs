@@ -9,6 +9,10 @@ namespace K8055Controller
 {
     static class Program
     {
+        /// <summary>
+        /// Mains the specified args.
+        /// </summary>
+        /// <param name="args">The args.</param>
         [STAThread]
         static void Main(string[] args)
         {
