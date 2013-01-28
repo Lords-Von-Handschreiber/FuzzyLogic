@@ -126,5 +126,12 @@ namespace K8055Controller
         {
             tc.SetNoHeaterOn(1);
         }
+
+        private void btnHeating_Click(object sender, EventArgs e)
+        {
+            FuzzyLogicEntry entry = new FuzzyLogicEntry(tc);
+            double result = entry.PerformFuzzyCalculation();
+            MessageBox.Show(result.ToString());
+        }
     }
 }

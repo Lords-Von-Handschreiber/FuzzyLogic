@@ -54,9 +54,9 @@ namespace FuzzyLogicImpl
         /// <summary>
         /// Performs the fuzzy calculation.
         /// </summary>
-        public void PerformFuzzyCalculation()
+        public double PerformFuzzyCalculation()
         {
-            if (controller.IsAvaiable())
+            if (controller.IsAvaiable())            
             {
                 LinguisticVariable tempinside = engine.LinguisticVariableCollection[0];
                 tempinside.InputValue = controller.GetInsideTemperature();
@@ -68,12 +68,14 @@ namespace FuzzyLogicImpl
                 {
                     double result =  engine.Defuzzify();
                     SetController(result);
+                    return result;
                 }
                 catch (Exception ex)
                 {
                     
                 }
             }
+            return -1;
         }
 
         /// <summary>

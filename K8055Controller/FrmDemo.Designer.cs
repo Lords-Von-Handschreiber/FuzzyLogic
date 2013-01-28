@@ -38,6 +38,7 @@
             this.butGetAreBothHeatersOn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.btnHeating = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // butisAvaiable
@@ -125,11 +126,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnHeating
+            // 
+            this.btnHeating.Location = new System.Drawing.Point(161, 12);
+            this.btnHeating.Name = "btnHeating";
+            this.btnHeating.Size = new System.Drawing.Size(143, 23);
+            this.btnHeating.TabIndex = 8;
+            this.btnHeating.Text = "PerformHeating";
+            this.btnHeating.UseVisualStyleBackColor = true;
+            this.btnHeating.Click += new System.EventHandler(this.btnHeating_Click);
+            // 
             // FrmDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 257);
+            this.Controls.Add(this.btnHeating);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.butSetBothHeatersOn);
             this.Controls.Add(this.butSetOneHeaterOn);
@@ -156,5 +168,6 @@
         private System.Windows.Forms.Button butGetAreBothHeatersOn;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHeating;
     }
 }
