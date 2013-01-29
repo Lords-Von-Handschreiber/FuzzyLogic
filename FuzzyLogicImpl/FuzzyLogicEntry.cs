@@ -72,7 +72,7 @@ namespace FuzzyLogicImpl
                 }
                 catch (Exception ex)
                 {
-                    
+
                 }
             }
             return -1;
