@@ -48,7 +48,7 @@ namespace K8055Controller
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void butisAvaiable_Click(object sender, EventArgs e)
         {
-            tc.IsAvaiable();
+            MessageBox.Show(tc.IsAvaiable().ToString());
         }
 
         /// <summary>
