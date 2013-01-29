@@ -176,7 +176,7 @@ namespace K8055Controller
                 //Beide Analoge Eingänge messen
                 ReadAllAnalog(ref Data1,ref Data2);
                 //Gemessene Voltzahl in Temperatur umwandeln
-                double temp = ((101 * (Data2 / 1024)) - 23);
+                double temp = (101 * (double)Data2 / 256) - 23;
                 return temp;
             }
             return -999;
@@ -190,7 +190,7 @@ namespace K8055Controller
         /// </returns>
         public bool GetIsOneHeaterOn()
         {
-            return heaterOneOn;
+            return heaterOneOn && !heaterTwoOn;
         }
 
         /// <summary>
@@ -201,14 +201,7 @@ namespace K8055Controller
         /// </returns>
         public bool GetAreBothHeatersOn()
         {
-            if (heaterOneOn && heaterTwoOn)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return heaterOneOn && heaterTwoOn;
         }
 
         /// <summary>
@@ -221,6 +214,8 @@ namespace K8055Controller
             {
                 OutputAnalogChannel(1, 255);
                 OutputAnalogChannel(2, 0);
+                heaterOneOn = true;
+                heaterTwoOn = false;
             }
         }
 
@@ -234,6 +229,8 @@ namespace K8055Controller
             {
                 OutputAnalogChannel(1, 255);
                 OutputAnalogChannel(2, 255);
+                heaterOneOn = true;
+                heaterTwoOn = true;
             }
         }
 
@@ -247,6 +244,8 @@ namespace K8055Controller
             {
                 OutputAnalogChannel(1, 0);
                 OutputAnalogChannel(2, 0);
+                heaterOneOn = false;
+                heaterTwoOn = false;
             }
         }
     }
