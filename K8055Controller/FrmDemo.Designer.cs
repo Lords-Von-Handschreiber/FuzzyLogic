@@ -39,6 +39,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.btnHeating = new System.Windows.Forms.Button();
+            this.btnTimer = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // butisAvaiable
@@ -113,8 +119,8 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 2000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button1
             // 
@@ -136,11 +142,53 @@
             this.btnHeating.UseVisualStyleBackColor = true;
             this.btnHeating.Click += new System.EventHandler(this.btnHeating_Click);
             // 
+            // btnTimer
+            // 
+            this.btnTimer.Location = new System.Drawing.Point(162, 42);
+            this.btnTimer.Name = "btnTimer";
+            this.btnTimer.Size = new System.Drawing.Size(142, 23);
+            this.btnTimer.TabIndex = 9;
+            this.btnTimer.Text = "Toggle Timer On";
+            this.btnTimer.UseVisualStyleBackColor = true;
+            this.btnTimer.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel3});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 248);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(512, 22);
+            this.statusStrip1.TabIndex = 10;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
+            // 
             // FrmDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 257);
+            this.ClientSize = new System.Drawing.Size(512, 270);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.btnTimer);
             this.Controls.Add(this.btnHeating);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.butSetBothHeatersOn);
@@ -153,7 +201,10 @@
             this.Name = "FrmDemo";
             this.Text = "FrmDemo";
             this.Load += new System.EventHandler(this.FrmDemo_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -169,5 +220,10 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnHeating;
+        private System.Windows.Forms.Button btnTimer;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
     }
 }

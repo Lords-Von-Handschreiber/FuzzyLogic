@@ -24,7 +24,8 @@ namespace K8055Controller
         public FrmDemo()
         {
             InitializeComponent();
-            // timer1.Tick += timer1_Tick; //tBX
+
+            Application.ApplicationExit += delegate { tc.SetNoHeaterOn(0.0); };
         }
 
         /// <summary>
@@ -34,7 +35,10 @@ namespace K8055Controller
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         void timer1_Tick(object sender, EventArgs e)
         {
-            fle.PerformFuzzyCalculation();
+            var result = fle.PerformFuzzyCalculation();
+            toolStripStatusLabel1.Text = "Inside Temp: " + Math.Round(tc.GetInsideTemperature(), 1) + "°C";
+            toolStripStatusLabel2.Text = "Outside Temp: " + tc.GetOutsideTemperature() + "°C";
+            toolStripStatusLabel3.Text = "Fuzzy Result: " + Math.Round(result, 2) + "%";
         }
 
         /// <summary>
@@ -133,6 +137,13 @@ namespace K8055Controller
             //double result = entry.PerformFuzzyCalculation();
             //MessageBox.Show(result.ToString());
             MessageBox.Show(fle.PerformFuzzyCalculation().ToString());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = !timer1.Enabled;
+            btnTimer.Text = "Toggle Timer " + (timer1.Enabled ? "Off" : "On");
+
         }
     }
 }
