@@ -84,11 +84,11 @@ namespace FuzzyLogicImpl
         /// <param name="result">The result.</param>
         public void SetController(double result)
         {
-            if (result >= 0.66)
+            if (result >= 66.66)
             {
                 controller.SetBothHeatersOn(result);
             }
-            else if (result >= 0.25)
+            else if (result >= 25)
             {
                 controller.SetOneHeaterOn(result);
             }
